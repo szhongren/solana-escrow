@@ -86,6 +86,7 @@ impl Processor {
         )?;
 
         msg!("Calling the token program to transfer token account ownership...");
+        // cross program invocation to the token program to transfer ownership of the token account to the escrow account
         invoke(
             &owner_change_ix,
             &[
