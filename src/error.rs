@@ -8,6 +8,10 @@ pub enum EscrowError {
     InvalidInstruction,
     #[error("Not Exempt From Rent")]
     NotRentExempt,
+    #[error("Expected Amount Does Not Match")]
+    ExpectedAmountMismatch,
+    #[error("Amount Overflow")]
+    AmountOverflow,
 }
 
 impl From<EscrowError> for ProgramError {
